@@ -30,7 +30,11 @@
       <div class="collapse navbar-collapse" id="navbar">
         <div class="navbar-nav">
           {% if user.is_authenticated %}
-          <a class="nav-item nav-link" id="home" href="/">Home</a>
+          <a class="nav-item nav-link" id="home" href="/">Jobs</a>
+          <a class="nav-item nav-link" id="cv" href="/cv">CV</a>
+          <a class="nav-item nav-link" id="test" href="/test">Test page</a>
+          <a class="nav-item nav-link" id="create_test" href="/create_test">Test creation page</a>
+          <a class="nav-item nav-link" id="admin" href="/admin">Admin page</a>
           <a class="nav-item nav-link" id="logout" href="/logout">Logout</a>
           {% else %}
           <a class="nav-item nav-link" id="login" href="/login">Login</a>

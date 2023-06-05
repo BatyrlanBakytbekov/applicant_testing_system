@@ -1,0 +1,23 @@
+{% extends "base.html" %} {% block title %}Admin page{% endblock %} {% block content %}
+<body>
+    <h1>Candidates</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Name</th>
+                <th>Test Name</th>
+                <th>Score</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for candidate in candidates %}
+            <tr>
+                <td>{{ candidate.name }}</td>
+                <td>{{ candidate.test_name }}</td>
+                <td>{{ candidate.score }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+{% endblock %}

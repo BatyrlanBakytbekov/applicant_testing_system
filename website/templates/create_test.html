@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+{% block title %}Test creation page{% endblock %}
+{% block content %}
+<h1>Create Test</h1>
+<form method="POST" action="/create_test">
+    <label>Test Name:</label>
+    <input type="text" name="test_name" required><br>
+    
+    {% for i in range(question_count) %}
+        <h3>Question {{ i+1 }}</h3>
+        <label>Question:</label>
+        <input type="text" name="question_{{i+1}}" required><br>
+        <label>Option 1:</label>
+        <input type="text" name="option1_{{i+1}}" required><br>
+        <label>Option 2:</label>
+        <input type="text" name="option2_{{i+1}}" required><br>
+        <label>Option 3:</label>
+        <input type="text" name="option3_{{i+1}}" required><br>
+        <label>Option 4:</label>
+        <input type="text" name="option4_{{i+1}}" required><br>
+        <label>Correct Answer:</label>
+        <input type="text" name="correct_answer_{{i+1}}" required><br>
+    {% endfor %}
+    
+    <input type="submit" value="Create Test">
+</form>
+{% endblock %}

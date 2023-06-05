@@ -1,0 +1,7 @@
+{% extends "base.html" %} {% block title %}Score{% endblock %} {% block content %}
+<body>
+	<h1>Your score is {{ score }} out of {{ questions|length }}!</h1>
+	<h2>Test passed: {{ passed }}</h2>
+	<h3>Available position: {{ position }}</h3>
+</body>
+{% endblock %}
